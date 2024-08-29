@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <%= image_tag "logo.png", alt: "logo", width: 40 %>
+        <div class="right">
+          <%= link_to "Mis listas", lists_path, class: "btn btn-outline-light" %>
+          <%= link_to "<i class=\"fa-solid fa-plus\"></i> Nueva lista".html_safe, new_list_path, class: "btn btn-outline-light" %>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
